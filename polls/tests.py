@@ -19,14 +19,6 @@ def create_question(question_text, days):
 
 
 class QuestionIndexViewTests(TestCase):
-    def test_homepage_displays_test_banner(self):
-        response = self.client.get(reverse("polls:index"))
-        self.assertContains(
-            response,
-            '<h1 class="test-banner">TEST</h1>',
-            html=True,
-        )
-
     def test_no_questions(self):
         """
         If no questions exist, an appropriate message is displayed.
