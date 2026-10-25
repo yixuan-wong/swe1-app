@@ -12,3 +12,13 @@ script:
   - coverage report
 after_success:
   - coveralls
+deploy:
+  provider: elasticbeanstalk
+  app: djangotutorial
+  env: swe1-app-env
+  region: us-east-1
+  bucket: elasticbeanstalk-us-east-1-197716153134
+  edge: true
+  wait_until_deployed: true
+  "on":
+    branch: main
