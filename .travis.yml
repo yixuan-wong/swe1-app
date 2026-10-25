@@ -4,5 +4,11 @@ python:
   - "3.14"
 install:
   - python -m pip install -r requirements.txt
+  - python -m pip install black flake8 coverage coveralls
 script:
-  - python manage.py test
+  - black --check mysite polls manage.py create_superuser.py
+  - flake8 mysite polls manage.py create_superuser.py
+  - coverage run --source=mysite,polls manage.py test
+  - coverage report
+after_success:
+  - coveralls
