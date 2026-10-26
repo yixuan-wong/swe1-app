@@ -10,8 +10,8 @@ script:
   - flake8 mysite polls manage.py create_superuser.py
   - coverage run --source=mysite,polls manage.py test
   - coverage report
-after_script:
-  - coveralls
+after_success:
+  - coveralls --service=travis-ci
 deploy:
   provider: elasticbeanstalk
   app: djangotutorial
