@@ -2,9 +2,6 @@
 
 <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 
-<main class="polls-home">
-    <h1 class="test-banner">TEST</h1>
-
 {% if latest_question_list %}
     <ul>
         {% for question in latest_question_list %}
@@ -18,4 +15,3 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
-</main>

@@ -3,23 +3,5 @@ li a {
 }
 
 body {
-    background: white url("images/background.png") no-repeat center center fixed;
-    background-size: cover;
-}
-
-.polls-home {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 1rem;
-}
-
-.test-banner {
-    margin: 0 0 1.5rem;
-    color: #176b2c;
-    font-size: clamp(4rem, 15vw, 9rem);
-    font-weight: 900;
-    letter-spacing: 0.12em;
-    text-align: center;
+    background-color: white;
 }
