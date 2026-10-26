@@ -2,9 +2,6 @@ language: python
 dist: noble
 python:
   - "3.14"
-branches: 
-  only: 
-    - main
 env:
   - COVERALLS_SERVICE_NAME=travis-pro
 install:
