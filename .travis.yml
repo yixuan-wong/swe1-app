@@ -10,8 +10,7 @@ script:
   - flake8 mysite polls manage.py create_superuser.py
   - coverage run --source=mysite,polls manage.py test
   - coverage report
-after_script:
-  - git checkout -B "$TRAVIS_BRANCH"
+after_success:
   - coveralls
 deploy:
   provider: elasticbeanstalk
