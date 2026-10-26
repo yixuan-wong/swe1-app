@@ -11,7 +11,6 @@ script:
   - coverage run --source=mysite,polls manage.py test
   - coverage report
 after_script:
-  - git checkout -B "$TRAVIS_BRANCH"
   - coveralls
 deploy:
   provider: elasticbeanstalk
