@@ -24,3 +24,4 @@ deploy:
   wait_until_deployed: true
   "on":
     branch: main
+    
